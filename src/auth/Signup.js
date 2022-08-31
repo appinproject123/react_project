@@ -1,6 +1,7 @@
 import { signup } from "../api/Api";
 import { useEffect,useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
+
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -38,6 +39,7 @@ export default function Signup()
                 <input type="number" name="phone" onChange={handleChange}/><br></br>
                 <input type="password" name="password" onChange={handleChange}/><br></br>
                 <input type="submit" value="Signup Karo Na"></input>
+                <Link to = "/">Login Kar lo</Link>
             </form>
         
         </>

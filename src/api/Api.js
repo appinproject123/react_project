@@ -3,7 +3,15 @@ import { ApiRoute } from "../routes/ApiRoutes"
 import { API_URL } from "./Url"
 export const getAllEmployee = async()=>
 {
-
+    const getHeader = {
+        method:'GET',
+        headers:{
+            'Content-Type':'application/json',
+            'Authorization':`Bearer ${getToken()}`
+        }
+    }
+    const response  = await fetch(`${API_URL.EMPLOYEE_URL}${ApiRoute.get_all_employee}`,getHeader)
+    return await response.json()
 }
 
 export const  getAllData = async()=>
